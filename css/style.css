@@ -1,6 +1,6 @@
 :root{
-    --main-color: #027581;
-    --color-dark: #1d2231;
+    --main-color: #14213d;
+    --color-dark: #fb8500;
     --text-grey: #8390a2;
 }
 
@@ -42,12 +42,17 @@
     padding: 1rem;
 }
 
+.sidebar-menu li ul li{
+    margin-left: 2rem;
+    margin-top: 0.4rem;
+}
+
 .sidebar li{
     margin-bottom: 1rem;
 }
 
 .sidebar a{
-    color:  fff;
+    color:  #fff;
     font-size: .9rem;
 }
 
@@ -55,7 +60,7 @@
     padding-left: .5rem;
 }
 
-#sidebar-toggle:checked ~ .sidebar{
+/* #sidebar-toggle:checked ~ .sidebar{
     width: auto;
 }
 
@@ -68,7 +73,7 @@
 #sidebar-toggle:checked ~.sidebar .sidebar-header,
 #sidebar-toggle:checked ~ .sidebar li {
     display:flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
 }
 
@@ -78,7 +83,7 @@
 
 #sidebar-toggle:checked ~ .main-content header{
     left: 60px;
-}
+} */
 
 .main-content{
     position: relative;
@@ -86,7 +91,7 @@
     transition: margin-left 500ms;
 }
 
-header{
+/* header{
     position: fixed;
     top: 0;
     left: 240px;
@@ -125,7 +130,7 @@ header{
     background-repeat: no-repeat;
     background-image: url();
     border-radius: 50%;
-}
+} */
 
 main{
     margin-top: 60px;
@@ -211,7 +216,7 @@ main{
     border-collapse: collapse;
 }
 
-.activity-card thead{
+/* .activity-card thead{
     background: #efefef;
     text-align: left;;
 }
@@ -228,9 +233,9 @@ td{
 
 td:nth-child(even){
     background: #f9fafc;
-}
+} */
 
-.badge{
+/* .badge{
     padding: .2rem 1rem;
     border-radius: 20px;
     font-weight: 700;
@@ -272,7 +277,7 @@ td:nth-child(even){
 
 .img-3{
     background-image: url(img/3.jpg);
-}
+} */
 
 .summary-card, .bday-card{
     margin-bottom: 1.5rem;
@@ -292,13 +297,13 @@ td:nth-child(even){
     padding-right: 1rem;
 }
 
-.summary-single h5{
-    color: var(--main-color);
+.summary-single h3{
+    color: var(--text-grey);
     font-size: 1.1rem;
     margin-bottom: 0rem !important;
 }
 
-.summary-single small{
+/* .summary-single small{
     font-weight: 700;
     color: var(--text-grey);
 }
@@ -322,9 +327,9 @@ td:nth-child(even){
     background-repeat: no-repeat;
     background-image: url(img/3.jpeg);
     margin-right: .7rem;
-}
+} */
 
-.text-center{
+/* .text-center{
     text-align: center;
 }
 
@@ -334,7 +339,7 @@ td:nth-child(even){
     border: 1px solid var(--main-color);
     border-radius: 4px;
     padding: .4rem 1rem;
-}
+} */
 
 @media only screen and (max-width: 1200px) {
     .sidebar{
