@@ -183,6 +183,15 @@ main{
     padding-right: 1rem;
 }
 
+.summary-card img{
+    width:80%;
+    margin-left:1rem;
+}
+
+.summary-card figcaption{
+    margin-left: 1rem;
+}
+
 .summary-single h3{
     color: var(--text-grey);
     font-size: 1.1rem;
