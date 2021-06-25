@@ -106,44 +106,82 @@
             <section class="recent">
                 <div class="activity-grid">
                     <div class="activity-card">
-                        <h3>Content</h3>
+                        <h3>Labweeks</h3>
                         <section>
-                           
-                            <h3>Case</h3>
-                            <div id="unoCase">
-                                <h4>Reimagine your phone without an interface</h4>
+                            <div id="labWeek">
+                                <h4>Brainstormen</h4>
                                 <p>
-                                    Er zijn al veel manieren waarop dit gedaan kan worden, denk aan een smartwatch, een gehoorapparaat waar dit zit ingebouwd en iets als google glass waarmee je ook kan bellen. Een nieuwe concept dat gebruikt kan worden als extensie voor je telefoon zou een armband of een ketting kunnen zijn, op deze manier heb je net als een smartwatch een device waarmee je belangrijke functies uit zou kunnen voeren. Denk hierbij aan bellen en gebeld worden. Het is mogelijk om bepaalde beweging te detecteren, en aan de hand van deze bewegingen bepaalde acties koppelen. Met een armband kan je bijvoorbeeld een rondje maken met je arm om op te nemen, of standaard berichten instellen voor whatsapp of een andere chat app. Dus wanneer je naar links beweegt met je arm dat je een “Ik ben momenteel niet beschikbaar” antwoord kan sturen.
+                                    Tijdens de lab weken ben ik samen met Tom Bielemans bezig geweest met het ontwikkelen van een wearable. Dit begon allemaal met het opstellen van ideeën en brainstormen om een concept te krijgen. Alle ideeën hebben we binnen een miro board geplaatst. 
+                                    Vervolgens zijn we met de concepten die we hebben gemaakt gaan kijken naar wat er allemaal mogelijk was, op deze manier zijn we tot een top 3 van concepten gekomen. Door feedback van andere studenten en door een comment van een docent zijn we tot de conclusie gekomen dat we een handschoen gaan maken waarmee je Rock Paper Scissors kan spelen. Het doel van de handschoen is dat je ook thuis wanneer er niemand om je hand is het spel kan spelen. Ergens was er ook nog een optie om de handschoen te koppelen met een andere handschoen zodat je het kan spelen zonder dat je echt bij elkaar hoeft te zijn. Dit bleek een te grote uitdaging binnen de 2 weken die we hadden om het product te realiseren. 
+                                </p>
+                                <h4>Inventariseren</h4>
+                                <p>
+                                    Om te beginnen moesten we inventariseren naar wat we allemaal nodig hebben en op welke manier we het kunnen maken. Door te zoeken naar mogelijkheden om de handgebaren te detecteren zijn we uitgekomen bij “Flex sensoren”. Deze sensoren geven zoals de naam eigenlijk al verklapt een waarde terug aan de hand van hoe ver de sensor gebogen wordt. Gelukkig waren deze ook op locatie aanwezig en hadden we meteen de mogelijkheid om dit uit te testen. 
+                                </p>
+                                <h4>proberen</h4>
+                                <p>
+                                    Na het testen van de flex sensoren hadden we een goed beeld van wat er allemaal nodig is om het spel werkende te krijgen. Wanneer 1 van de sensoren gebogen is zal de speler gekozen hebben voor “schaar”. Wanneer beide sensoren gebogen zijn zal de speler hebben gekozen voor “steen” en wanneer er geen van beide gebogen is zal de speler voor “papier” hebben gekozen. Dit is dus iets wat we vervolgens in de code verwerkt hebben zodat we konden detecteren wat de keuze was van de speler. De input moest ook nog gemapt worden en aangepast zodat het niet bij een kleine beweging al automatisch de keuze maakt maar dat het echt goed gebogen moet zijn.
+                                </p>
+                                <br>
+                                <p>
+                                    Nadat de sensoren klaar waren wilde we ergens nog kunnen tonen of je hebt gewonnen van de computer, anders heeft het ook geen nut als je niet weet of je hebt gewonnen of niet. Hierdoor kwamen we uit bij het toevoegen van een LCD scherm. Dit scherm wordt gebruikt om af te tellen zodat je weet wanneer je je keuze moet maken, en hierop komt te zien wie de winnaar is. Ook was het nog een idee om de score bij te houden van de speler en de computer echter was het scherm niet groot genoeg hiervoor en kwamen stukken buiten beeld.
+
+                                </p>
+                                <br>
+                                <p>
+                                    Het coderen van de LCD scherm ging vrij gemakkelijk aangezien hier al ervaring mee was, de problemen die we tegenkwamen met het scherm waren voornamelijk met het vastmaken aan het handschoen, maar daarover later meer.
+                                </p>
+                                <br>
+                                <p>
+                                    Nu we een manier hadden om het te tonen en te detecteren of de speler een keuze heeft gemaakt, wilde we ook een start inschakelen. Dus wanneer begint het aftellen en wanneer komt het resultaat.  Het eerste plan was om met een accelerometer te werken, waarmee je de pieken kan tellen die bij “steen papier schaar” standaard zijn. Echter was dit iets dat niet soepel verliep omdat het vinden van een beginpunt niet al te makkelijk ging. 
+                                </p>
+                                <br>
+                                <p>
+                                    Uiteindelijk hebben we gekozen voor een “forse sensetive resistor”. Deze resistor detecteert wanneer het wordt ingedrukt, zo kunnen we tellen wanneer er 3 maal ingedrukt is om het spel te starten. Deze sensor is dus onderin de handschoen vast gemaakt om zo te detecteren wanneer het spel zal beginnen.
+                                </p>
+                                <h4>Realiseren</h4>
+                                <p>
+                                    Nu alle losse onderdelen die we nodig hebben om het spel te spelen individueel werken, was het tijd om de code bij elkaar te voegen. Dit is iets dat met wat meer moeite dan verwacht is gelukt, de code werkte de eerste paar keren niet doordat er iets mis was met het aansluiten van een LCD scherm, dit was eigenlijk  het grootste probleem waar we tegen aan zijn gelopen gedurende het project.  
+                                </p>
+                                <br>
+                                <p>
+                                    Toen alles samenwerkte op een breadboard hebben we ervoor gekozen om het vast te maken op een handschoen, dit verliep alles behalve soepel. De flex sensoren en de force sensitive resistor waren makkelijk om aan de handschoen vast te maken met duct tape, hierdoor bleven ze goed zitten en gaf het geen probleem. Maar het LCD scherm vast maken op een plak waar die goed bleef zitten verliep niet zo soepel, het was een stoffen handschoen dus er was niet echt een oppervlak waar het goed aan kon blijven plakken. Uiteindelijk hebben we ervoor gekozen om het met tyraps vast te maken, door deze door het stof en door de openingen in het LCD scherm te halen. 
+
+                                </p>
+                                <br>
+                                <p>
+                                    Nu het scherm en de sensoren vast zaten was het tijd om de arduino en een klein breadboard vast te maken aan de handschoen, dit ging ook zeker niet makkelijk omdat je met beperkte ruimte zit. De plekken waar je het vast kon maken was eigenlijk alleen maar aan de bovenkant van je hand omdat je met steen papier schaar ook een vuist moet kunnen maken. Het is ons uiteindelijk toch gelukt om het vast te maken, maar wanneer je het te actief speelt is er een mogelijkheid dat de arduino loskomt van de handschoen. Dit is iets wat we de volgende keer zouden kunnen aanpassen door het vast te maken aan een stuk hout en dat vervolgens te verbinden aan de handschoen of om je arm, zodat het een grotere oppervlak heeft om aan vast te blijven zitten.
+ 
                                 </p>
                                 </div>
                         </section>
-                        <section>
-                            <h3>Research</h3>
-                            <div id="arAdobe">
-                                <h4>Adobe Aero</h4>
-                                <p>
-                                    
-                                    <br><a href="https://www.youtube.com/watch?v=1F83n8W2JUg">Link naar video</a>
-                                </p>
-
-                            </div>
-                            <div id="arKicks">
-                                <h4>Wanna Kicks</h4>
-                                <p>
-                                   
-                                    <br><a href="https://www.youtube.com/watch?v=UmJriqzDUTo">Link naar video</a>
-                                </p>
-
-                            </div>
-
-                        </section>
+                           
                     </div>
                     <div class="summary">
                         <div class="summary-card">
                             <div class="summary-single">
-                                <h3>Process</h3>
-                                <img src="">
+                                <h3>images</h3>
                             </div>
+                            <img src="img/labweek/concepten.jpg">
+                            <figcaption>Concepten</figcaption>
+
+                            <img src="">
+                            <figcaption>flexsensoren</figcaption>
+
+                            <img src="img/labweek/LCD.jpg">
+                            <figcaption>LCD scherm</figcaption>
+
+                            <img src="img/labweek/FSR.jpg">
+                            <figcaption>Force Sensetive Resistor</figcaption>
+
+                            <img src="img/labweek/testen.jpg">
+                            <figcaption>testen</figcaption>
+
+                            <img src="img/labweek/glove.jpg">
+                            <figcaption>Eindproduct</figcaption>
+
+                            <img src="">
+                            <figcaption>Code</figcaption>
                         </div>
                     </div>
                 </div>
