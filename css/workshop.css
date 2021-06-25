@@ -147,6 +147,7 @@ main{
 
 .activity-card section p{
     margin-left:2rem;
+    max-width: 90%;
 }
 
 
@@ -172,7 +173,6 @@ main{
     color: var(--text-grey);
     font-size: 1.1rem;
     margin-bottom: 0rem !important;
-    top:0;
 }
 
 .active{
@@ -180,9 +180,13 @@ main{
     text-decoration: underline;
 }
 
-.summary-single img{
-    max-width:100%;
-    display:block;
+.summary-card img{
+    max-width:80%;
+    margin-left: 1rem;
+}
+
+.summary-card figcaption{
+    margin-left: 1rem;
 }
 
 @media only screen and (max-width: 1200px) {
