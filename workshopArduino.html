@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Portfolio HCI</title>
+    <link rel="stylesheet" href="css/workshop.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>
+                <span>HCI Portfolio</span>
+                <br>
+                <span> Sam Cinjee</span>
+            </h3>
+            <!-- <label for="sidebar-toggle" class="fas fa-bars"></label> -->
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="fas fa-home"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fas fa-chalkboard-teacher"></span>
+                        <span>Topic assignments</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="topicAssignmentAR.html">
+                                <span class="fas fa-vr-cardboard"></span>
+                                <span> AR/VR</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="topicAssignmentWearable.html">
+                                <span class="fas fa-microchip"></span>
+                                <span> Wearables</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="topicAssignmentArtifical.html">
+                                <span class="fas fa-microchip"></span>
+                                <span> Artificial Creatures</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="topicAssignmentPlayful.html">
+                                <span class="fas fa-camera"></span>
+                                <span> Playful Interaction</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fas fa-folder active"></span>
+                        <span>Workshops</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="workshopAR.html">
+                                <span class="fas fa-vr-cardboard"></span>
+                                <span> Workshop AR/VR</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="workshopArduino.html">
+                                <span class="fas fa-microchip active"></span>
+                                <span> Workshop Arduino</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="workshopCV.html">
+                                <span class="fas fa-camera"></span>
+                                <span>Workshop CV</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fas fa-chalkboard-teacher"></span>
+                        <span> Guest Lecture</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="">
+                        <span class="far fa-clipboard"></span>
+                        <span>Lab weeks</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <main>
+            <section class="recent">
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <h3>Opdrachten</h3>
+                        <section>
+                            <h3>Blink</h3>
+                            <p>
+                                bij deze opdracht is het de bedoeling dat beiden led lampen aan gaan, echter is het de opdracht dat ze om de beurt aan gaan. Dit kan je doen door een delay in te stellen. Hierdoor gaat de ene led lamp aan wanneer de ander uit gaat, en ook omgedraaid. Dit is vrij simpel te doen aan de hand van een “delay(1000);” bijvoorbeeld. Je kan het ook met een if statement oplossen. Dat wanneer een van de led lampen high is dat de ander low wordt.
+                            </p>
+                            <h3>Fade led</h3>
+                            <p>
+                                Bij deze opdracht gaat het erom dat de ledlamp feller gaat schijnen dit gebeurt door een PWM pin, hierbij kan je een value sturen tussen de 0 en 255. Dus hoe hoger het getal is dat je doorstuurt naar de ledpin des te feller het gaan schijnen. Om handmatig elke keer een +10 value of een -10 value te sturen is te veel werk, dit kan vereenvoudigd worden aan de hand van een for loop waarbij je elke keer weer +10 kan sturen. EN wanneer 255 bereikt is, kan je ook weer de for loop omdraaien en elke keer -10 sturen.
+                            </p>
+                            <h3>Controller with a potmeter</h3>
+                            <p>
+                                Een potmeter is een eigenlijk een draaiknop, met 2 eindstanden, eentje helemaal links en de ander helemaal rechts, je kan het zelf bepalen hoe je dit mapt om zo de ene kant helemaal op 0 te zetten en de andere kant op 1023.  Doordat dit te mappen is kan je het zo instellen dat de ene value 1023 als uit ziet en de andere value ziet het als aan. DIt is gebruikt voor deze opdracht om het ene ledlampje aan te zetten terwijl je de ander daarmee just uitzet.
+                            </p>
+                            <h3>Led Matrix</h3>
+                            <p>
+                                De led matrix is vrij gemakkelijk te begrijpen. Het bestaan uit verschillende individuele led lampen die je aan en uit kan zetten. Hierdoor kan je er symbolen mee maken zoals een smiley die lacht of eentje die verdrietig is. Dit doe je door de bepaalde ledlamp die je wilt in te schakelen. Dit doe je door de bepaalde row aan te roepen en vervolgens met 0 en 1 te zeggen welke aan en uit moet. Waarbij 1 aan is en 0 is uit.
+                            </p>
+                            <h3>Led with light</h3>
+                            <p>
+                                Voor de arduino zijn er ook sensoren die licht op kunnen pikken, deze sensoren geven dus ook een waarde terug wanneer er veel en wanneer er weinig licht is. Dit kan je gebruiken om de lampen aan te laten gaan wanneer er weinig licht is. Dat is ook voor deze opdracht gedaan, hierbij is er een sensor als input gekoppeld aan een ledlamp die feller gaat schijnen wanneer er minder licht bij komt.
+                            </p>
+                            <h3>Sound</h3>
+                            <p>
+                                Je kan ook een speaker koppelen aan de arduino, deze zorgt voor bepaalde trillingen waardoor er geluid komt. Je kan zelf de frequenties in stellen van het geluid dat je wilt produceren, In dit geval ging het om een sirene. Om dit te bereiken moet je een for loop gebruiken om de frequentie steeds hoger te maken, en wanneer je een bepaalde frequentie bereikt heb. Kan je het omdraaien om het vervolgens weer terug te zetten naar de oude/begin frequentie. Door deze manier te gebruiken loopt het eerst op, tot het maximum bereikt en gaat vervolgens weer op dezelfde manier terug naar het originele geluid.
+                            </p>
+                            <h3>Distance</h3>
+                            <p>
+                                Je hebt ook een sensor die afstand kan meten, dit gebeurt door een ultrasonische pulse die het terug krijgt wanneer er iets binnen een bepaald afstand staat. Bij deze opdracht moet je een ledlamp koppelen zodat die aan gaat wanneer er iets is binnen 50cm dat je kan meten door de sensor. Je moet de waarde die je terug krijgt wel eerst converteren naar een waarde die logisch is aangezien het met 340 m/s gaat oftewel 29 milliseconden per centimeter.
+                            </p>
+                            <h3>Arduino en processing</h3>
+                            <p>
+                                Arduino kan gebruikt worden voor meerdere programma’s zo kan je de input van de arduino in processing gebruiken om iets te tonen. IN dit geval ging het om een cirkel die werkt met een potmeter. De potmeter geeft een waarde terug waarna processing dit omzet tot een cirkel die in grootte kan veranderen wanneer je aan de potmeter draait. Deze potmeter heeft de value 0-255 en 255 is het grootste
+                            </p>
+                            <h3>Buttons</h3>
+                            <p>
+                                Een button kan gebruikt worden om iets aan of uit te zetten. DIt is gedaan door de input van de button te vragen. Het resultaat dat je krijgt zal waarschijnlijk low zijn als het niet is ingedrukt of high wanneer het wel is ingedrukt. DIt kan je gebruiken om een led lamp aan of uit te zetten wanneer je het indrukt. Dus wanneer de button high is zet je de ledlamp ook naar high. In deze opdracht was het juist andersom en moest je de led lamp uitzetten wanneer je op de knop drukte.
+                            </p>
+                            <h3>Servo motor</h3>
+                            <p>
+                                Een servomotor is een motortje dat 180 graden kan draaien. Je kan het ook heen en weer laten bewegen zodat het motortje een leuke beweging of iets kan doen, zo kan je het heen en weer laten zwaaien bijvoorbeeld. Dit is iets dat ook voor deze opdracht gedaan is, door het motortje te koppelen en met code een bepaalde stand aan te laten nemen.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="summary">
+                        <div class="summary-card">
+                            <div class="summary-single">
+                                <h3>Process</h3>
+                                <img src="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
