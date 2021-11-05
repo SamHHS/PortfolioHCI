@@ -139,6 +139,20 @@
                                 <p>
                                     Uiteindelijk hebben we gekozen voor een “forse sensetive resistor”. Deze resistor detecteert wanneer het wordt ingedrukt, zo kunnen we tellen wanneer er 3 maal ingedrukt is om het spel te starten. Deze sensor is dus onderin de handschoen vast gemaakt om zo te detecteren wanneer het spel zal beginnen.
                                 </p>
+                                <h4>Tinkering</h4>
+                                <p>
+                                    Om de handschoen fatsoenlijk te laten werken, hebben we nagedacht over de verschillende manier om te registreren welke positie een hand aanneemt. In eerste instantie waren we van plan om elke vinger een flex sensor te geven, zo kan je zien welke vingers “geactiveerd” zijn.  Uiteindelijk zijn we tot de conclusie gekomen dat er maar 2 sensoren nodig zijn, de middelvinger en de ringvinger. 
+                                Tijdens “steen” zijn de middelvinger en ringvinger beide geboden, hierdoor is dat makkelijk te registreren. Tijdens “papier”  zijn beide gestrekt. Ook dit is makkelijk te registreren. Tijdens “schaar” is de ringvinger gebogen en de middelvinger gestrekt, hierdoor is het makkelijk te concluderen welke keuze de speler heeft gemaakt.</p>
+                                </p>
+                                <br>
+
+                                <p>
+                                    Nadat het registreren van de keuze van de speler opgelost was, moesten we nadenken over de manier hoe je de keuze van de AI kan programmeren, Dit bleek een makkelijke oplossing te zijn aangezien je een willekeurige keuze kan maken tussen 3 getallen. En elke uitkomst kan koppelen aan een optie: 1: steen, 2: papier, en 3:schaar.
+                                </p>
+                                <br>
+                                <p>
+                                    Het laatste probleem waar we tegenaan liepen was het starten van het spel. In eerste instantie ging het op een timer, aangezien het via de arduino altijd in een loop zit. Dit zorgde regelmatig voor een verkeerde timing tijdens het spelen. Om dit op te lossen zijn we gaan nadenken hoe we dit zouden kunnen oplossen. Op deze manier zijn we bij een force resistance sensor gekomen, deze meet wanneer er op gedrukt wordt. Door gebruik te maken van de FRS kan je zoals bij steen papier schaar gewoonlijk is 3 keer naar boven en naar beneden gaan, en op die manier wordt het spel geactiveerd.
+                                </p>
                                 <h4>Realiseren</h4>
                                 <p>
                                     Nu alle losse onderdelen die we nodig hebben om het spel te spelen individueel werken, was het tijd om de code bij elkaar te voegen. Dit is iets dat met wat meer moeite dan verwacht is gelukt, de code werkte de eerste paar keren niet doordat er iets mis was met het aansluiten van een LCD scherm, dit was eigenlijk  het grootste probleem waar we tegen aan zijn gelopen gedurende het project.  
@@ -151,8 +165,9 @@
                                 <br>
                                 <p>
                                     Nu het scherm en de sensoren vast zaten was het tijd om de arduino en een klein breadboard vast te maken aan de handschoen, dit ging ook zeker niet makkelijk omdat je met beperkte ruimte zit. De plekken waar je het vast kon maken was eigenlijk alleen maar aan de bovenkant van je hand omdat je met steen papier schaar ook een vuist moet kunnen maken. Het is ons uiteindelijk toch gelukt om het vast te maken, maar wanneer je het te actief speelt is er een mogelijkheid dat de arduino loskomt van de handschoen. Dit is iets wat we de volgende keer zouden kunnen aanpassen door het vast te maken aan een stuk hout en dat vervolgens te verbinden aan de handschoen of om je arm, zodat het een grotere oppervlak heeft om aan vast te blijven zitten.
- 
                                 </p>
+                                <br>
+                               
                                 </div>
                         </section>
                            
